@@ -1,6 +1,6 @@
 # core/app.py
-from core.router import Router
-from core.django_orm import setup_django
+from .router import Router
+from .django_orm import setup_django
 
 setup_django()
 
