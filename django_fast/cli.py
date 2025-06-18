@@ -1,6 +1,6 @@
 # cli.py
 import argparse
-from .core import app, project_scaffolder
+from .core import app
 
 parser = argparse.ArgumentParser()
 subparsers = parser.add_subparsers(dest="command")
@@ -11,7 +11,8 @@ subparsers.add_parser("runserver")
 args = parser.parse_args()
 
 if args.command == "startproject":
-    project_scaffolder.create_project()
+    from .project_scaffolder import create_project
+    create_project()
 elif args.command == "runserver":
     import uvicorn
     uvicorn.run("main:app", reload=True)

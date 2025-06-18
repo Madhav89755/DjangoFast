@@ -3,7 +3,7 @@ DEBUG = True
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.auth",
-    "app",  # Your models go here
+    # "app",  # Your models go here
 ]
 
 DATABASES = {
@@ -14,3 +14,4 @@ DATABASES = {
 }
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+ROOT_URLCONF = "urls"
