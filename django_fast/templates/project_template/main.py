@@ -1,7 +1,5 @@
-from myframework import app, route
-from django_orm_setup import setup_django
-setup_django()
+from core.router import Router
 
-@route("/")
-async def index(request):
-    return {"message": "Welcome to your new app!"}
+@Router.route("/", method="GET")
+def index(request):
+    return {"message": "Hello from your django-fast!"}
